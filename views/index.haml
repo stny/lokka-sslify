@@ -1,0 +1,8 @@
+%h2 sslify
+%form{:action => '/admin/plugins/sslify', :method => 'post'}
+  %input{:type => 'hidden', :name => '_method', :value => 'put'}
+  .field
+    %label{:for => 'sslify'}= t.sslify
+    %input{:type => 'checkbox', :id => 'sslify', :name => 'sslify', :checked => Option.sslify || false}
+  .field
+    %input{:type => 'submit', :value => t.save}
